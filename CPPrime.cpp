@@ -21,7 +21,7 @@ void prime(vector<int> &, int, int,  vector<int> &);
 // Global mutex
 mutex vectorMutex;
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
 	// Create an instance of the vector containers
 	vector<int> numbers;
@@ -76,6 +76,7 @@ void main(int argc, char* argv[])
 	// Pause the console screen
 	cout << "Press any key to exit" << endl;
 	cin.get();
+	return 0;
 }
 
 /*-----------------------------------------------------------------------
