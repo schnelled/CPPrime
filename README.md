@@ -15,7 +15,7 @@
   <li>Run the program</li>
   
   ```
-  ./CPPrime.exe
+  CPPrime.exe
   ```
 
 </ol>
