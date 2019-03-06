@@ -1,6 +1,6 @@
-IDIR = ./
 CC = g++
-CFLAGS = -I$(IDIR)
+DEBUG = -g
+CFLAGS = -Wall $(DEBUG) -std=c++11 -pthread
 
 UNAME := $(shell uname)
 
@@ -8,11 +8,11 @@ ifeq ($(UNAME), Linux)
 CFLAGS += -DLINUX
 endif
 
-CPPrime: CPPrime.cpp
-  make clean
-  $(CC) -o CPPrime.o CPPrime.cpp $(CFLAGS)
-  
 .PHONY: clean
 
+CPPrime: CPPrime.cpp
+	make clean
+	$(CC) -pthread -o CPPrime.o CPPrime.cpp $(LIBS)
+
 clean:
-  rm -f CPPrime.o
+	rm -f CPPrime.o
